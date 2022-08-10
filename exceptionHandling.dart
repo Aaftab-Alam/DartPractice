@@ -14,4 +14,14 @@ void main(List<String> args) {
   } catch (e) {
     print(e);
   }
+
+  //Stack Trace:-events happened before exception was thrown.
+  try {
+    int result = 12 ~/ 0;
+    print(result);
+  } catch (e, s) {
+    print("Error is $e");
+    print("STACK TRACE");
+    print(s);
+  }
 }
